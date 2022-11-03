@@ -4,6 +4,7 @@
     "editor.suggestSelection": "first",
     "editor.formatOnSave": true,
     "editor.formatOnPaste": true,
+    "workbench.colorTheme": "Dark+ (contrast)",
     "files.autoSave": "afterDelay",
     "files.associations": {
       "**/*.yml": "ansible"

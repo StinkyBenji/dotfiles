@@ -1,11 +1,10 @@
 #!/bin/bash
-
-# The Brewfile handles Homebrew-based app and library installs, but there may
-# still be updates and installables in the Mac App Store. There's a nifty
-# command line interface to it that we can use to just install everything, so
-# yeah, let's do that.
+if test ! "$(uname)" = "Darwin"
+  then
+  exit 0
+fi
 
 sudo softwareupdate -i -a
+xcode-select --install
 
-# shellcheck disable=SC1090
-source "${BASH_SOURCE%/*}"/set-defaults.sh§
+
