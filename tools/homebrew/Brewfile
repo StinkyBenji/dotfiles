@@ -24,4 +24,6 @@ brew "kustomize"
 
 cask "visual-studio-code"
 cask "notion"
-
+cask "spotify"
+cask "google-chrome"
+cask "docker"

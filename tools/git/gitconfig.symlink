@@ -1,0 +1,41 @@
+[include]
+  path = ~/.gitconfig.local
+[credentials]
+  helper = osxkeychain
+[hub]
+  protocol = https
+[alias]
+  co = checkout
+  promote = !$DOTFILE_HOME/bin/git-promote
+  wtf     = !$DOTFILE_HOME/bin/git-wtf
+  count   = !git shortlog -sn
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  ui = true
+[core]
+  excludesfile = ~/.gitignore
+  editor = vim
+[apply]
+  whitespace = nowarn
+[mergetool]
+  keepBackup = false
+[difftool]
+  prompt = false
+[help]
+  autocorrect = 1
+[push]
+  # See `git help config` (search for push.default)
+  # for more information on different options of the below setting.
+  #
+  # Setting to git 2.0 default to suppress warning message
+  default = simple
+[credential]
+	helper = store
+[pull]
+	rebase = false
+[init]
+	defaultBranch = main
+[user]
+	email = 5434875+PixelJonas@users.noreply.github.com
