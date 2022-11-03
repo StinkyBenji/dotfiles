@@ -23,7 +23,7 @@ fail () {
 }
 
 setup_gitconfig () {
-  if ! [ -f specific/git/gitconfig-local.symlink ]; then
+  if ! [ -f tools/git/gitconfig-local.symlink ]; then
     info 'setup gitconfig'
 
     user ' - What is your github author name?'
@@ -119,13 +119,13 @@ install_dotfiles () {
 setup_gitconfig
 install_dotfiles
 
-info "installing dependencies"
-if source script/dependencies-install.sh
-then
-  success "dependencies installed"
-else
-  fail "error installing dependencies"
-fi
+# info "installing dependencies"
+# if source script/dependencies-install.sh
+# then
+#   success "dependencies installed"
+# else
+#   fail "error installing dependencies"
+# fi
 
 echo ''
 success '  All installed!'

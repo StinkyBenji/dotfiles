@@ -1,1 +1,2 @@
 *.lock.json
+../tools/git/gitconfig-local.symlink

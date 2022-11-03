@@ -1,4 +1,4 @@
-export DOTFILE_HOME=$HOME/.dotfiles
+export DOTFILES=$HOME/.dotfiles
 # disable the update prompt and perform an auto-update
 export DISABLE_UPDATE_PROMPT=true
 
@@ -16,7 +16,7 @@ fi
 
 # all of our zsh files
 typeset -U config_files
-config_files=($DOTFILE_HOME/**/*.zsh)
+config_files=($DOTFILES/**/*.zsh)
 
 # load the path files
 for file in ${(M)config_files:#*/path.zsh}

@@ -22,7 +22,10 @@ brew "gum"
 brew "ffmpeg"
 brew "kustomize"
 brew "gh"
+brew "go"
 brew "shellcheck"
+brew "golangci-lint"
+brew "podman"
 
 
 cask "visual-studio-code"
