@@ -119,13 +119,13 @@ install_dotfiles () {
 setup_gitconfig
 install_dotfiles
 
-# info "installing dependencies"
-# if source script/dependencies-install.sh
-# then
-#   success "dependencies installed"
-# else
-#   fail "error installing dependencies"
-# fi
+info "installing dependencies"
+if source script/dependencies-install.sh
+then
+  success "dependencies installed"
+else
+  fail "error installing dependencies"
+fi
 
 echo ''
 success '  All installed!'

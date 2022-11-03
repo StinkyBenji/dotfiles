@@ -1,18 +1,22 @@
+#!/bin/sh
+# this installs openshift-cli
+
 OS_NAME="linux"
 
 if test "$(uname)" = "Darwin"; then
   OS_NAME="mac"
 fi
 
-if test ! $(command -v oc); then
+if test ! "$(command -v oc)"; then
   echo "Installing OpenShift CLI"
-  mkdir -p "${DOTFILE}/oc/tmp"
-  curl -sSL "https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest/openshift-client-${OS_NAME}.tar.gz" > "${DOTFILE_HOME}/openshift-cli/tmp/oc.tar.gz"
   
-  tar xvzf "${DOTFILE}/oc/tmp/oc.tar.gz" --directory "${DOTFILE_HOME}/openshift-cli/tmp" "oc" 
+  mkdir -p "${DOTFILE_HOME}/tools/oc/tmp"
+  curl -sSL "https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest/openshift-client-${OS_NAME}.tar.gz" > "${DOTFILE_HOME}/tools/oc/tmp/oc.tar.gz"
   
-  cp "${DOTFILE}/oc/tmp/oc" "$HOME/bin/oc"
+  tar xvzf "${DOTFILE_HOME}/tools/oc/tmp/oc.tar.gz" --directory "${DOTFILE_HOME}/tools/oc/tmp" "oc" 
   
-  sudo chmod +x "$HOME/bin/oc"
-  rm -rf "${DOTFILE}/oc/tmp"
+  cp "${DOTFILE_HOME}/tools/oc/tmp/oc" "/usr/local/bin/oc"
+  
+  sudo chmod +x "/usr/local/bin/oc"
+  rm -rf "${DOTFILE_HOME}/tools/oc/tmp"
 fi
