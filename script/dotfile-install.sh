@@ -34,7 +34,7 @@ setup_gitconfig () {
     sed \
       -e "s/AUTHORNAME/$git_authorname/g" \
       -e "s/AUTHOREMAIL/$git_authoremail/g" \
-      specific/git/gitconfig-local.symlink.example > specific/git/gitconfig-local.symlink
+      tools/git/gitconfig-local.symlink.example > tools/git/gitconfig-local.symlink
 
     success 'gitconfig'
   fi
@@ -120,7 +120,7 @@ setup_gitconfig
 install_dotfiles
 
 info "installing dependencies"
-if source scripts/dependencies-install.sh
+if source script/dependencies-install.sh
 then
   success "dependencies installed"
 else

@@ -21,6 +21,8 @@ brew "glow"
 brew "gum"
 brew "ffmpeg"
 brew "kustomize"
+brew "gh"
+brew "hub"
 
 cask "visual-studio-code"
 cask "notion"
