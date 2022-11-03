@@ -2,7 +2,7 @@
 # Install homebrew if not already present
 
 
-if test ! $(which brew); then
+if test ! "$(which brew)"; then
   echo "Start installing homebrew"
 
 # Install the correct homebrew for each OS type

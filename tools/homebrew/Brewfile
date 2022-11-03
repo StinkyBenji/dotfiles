@@ -26,6 +26,8 @@ brew "go"
 brew "shellcheck"
 brew "golangci-lint"
 brew "podman"
+brew "age"
+
 
 
 cask "visual-studio-code"
