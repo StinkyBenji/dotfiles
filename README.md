@@ -8,5 +8,5 @@
 
 ## To-do
 
-[ ] fix install.sh permission issues
-[ ] add sops age config
+- [ ] fix install.sh permission issues
+- [ ] add sops age config

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #
 # install all the dotfiles to your terminal
 #
@@ -48,11 +48,11 @@ link_file () {
   local action=
 
   if [ -f "$DST" ] || [ -d "$DST" ] || [ -L "$DST" ]; then
-    if [ "$overwrite_all" == "false" ] && [ "$backup_all" == "false" ] && [ "$skip_all" == "false" ]; then
+    if [ "$overwrite_all" = "false" ] && [ "$backup_all" == "false" ] && [ "$skip_all" = "false" ]; then
       local currentSrc
       currentSrc="$(readlink "$DST")"
 
-      if [ "$currentSrc" == "$SRC" ]; then
+      if [ "$currentSrc" = "$SRC" ]; then
         skip=true;
       else
         user "File already exists: $DST ($(basename "$SRC")), what do you want to do?\n\
@@ -120,7 +120,7 @@ setup_gitconfig
 install_dotfiles
 
 info "installing dependencies"
-if source script/dependencies-install.sh
+if ./script/dependencies-install.sh
 then
   success "dependencies installed"
 else
