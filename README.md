@@ -8,5 +8,10 @@
 
 ## To-do
 
-- [ ] fix install.sh permission issues
+- [ ] fix install.sh
 - [ ] add sops age config
+
+### notes
+
+[bugs]
+https://github.com/golang/go/pull/53986 : need to downgrade `oc`
