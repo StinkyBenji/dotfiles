@@ -1,2 +1,4 @@
 *.lock.json
-../tools/git/gitconfig-local.symlink
+tools/git/gitconfig-local.symlink
+homebrew.path.zsh
+~/
