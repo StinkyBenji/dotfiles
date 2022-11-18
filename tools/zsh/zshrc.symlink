@@ -6,20 +6,37 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 export DOTFILES=$HOME/.dotfiles
+
+# Load antigen
+source $DOTFILES/antigen/antigen.zsh
+
+# Load oh-my-zsh library
+antigen use oh-my-zsh
+
+# Load bundles from the default repo (oh-my-zsh)
+antigen bundle git
+antigen bundle command-not-found
+antigen bundle kubectl
+antigen bundle oc
+
+# Load bundles from external repos
+antigen bundle zsh-users/zsh-completions
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle MichaelAquilina/zsh-you-should-use
+
+POWERLEVEL10K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/romkatv/powerlevel10
+
+# Select theme
+antigen theme romkatv/powerlevel10k powerlevel10k
+
+# Tell Antigen that you're done
+antigen apply
+
 # disable the update prompt and perform an auto-update
 export DISABLE_UPDATE_PROMPT=true
-
-# your project folder that we can `c [tab]` to
 export PROJECTS=$HOME/code
 
-ZSH_THEME="powerlevel10k/powerlevel10k"
-# Stash your environment variables in ~/.localrc. This means they'll stay out
-# of your main dotfiles repository (which may be public, like this one), but
-# you'll have access to them in your scripts.
-if [[ -a ~/.localrc ]]
-then
-  source ~/.localrc
-fi
 
 # all of our zsh files
 typeset -U config_files

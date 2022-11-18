@@ -2,16 +2,18 @@
     link:
       relink: true
 
-- clean: ['~']
+- clean: ["~"]
 
+# set up symlink
 - link:
-    ~/.tmux.conf: tmux.conf
-    ~/.vim: vim
-    ~/.vimrc: vimrc
-
-- create:
-    - ~/downloads
-    - ~/.vim/undo-history
+    ~/.zshrc: tools/zsh/zshrc.symlink
+    ~/.gitconfig: tools/git/gitconfig.symlink
+    ~/.gitignore: tools/git/gitignore.symlink
+    ~/.vimrc: tools/vim/vimrc.symlink
+    ~/.p10k.zsh: tools/zsh/p10k.zsh
 
 - shell:
-  - [git submodule update --init --recursive, Installing submodules]
+    - [git submodule update --init --recursive, Installing submodules]
+    - [source $HOME/.zshrc]
+    - [$DOTFILES/script/dependencies-install.sh]
+    - [$DOTFILES/script/dependencies-update.sh]
