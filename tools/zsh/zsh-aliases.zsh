@@ -10,8 +10,6 @@ alias l="ls -lh --color"
 alias ll="ls -lh --color"
 alias lla="ll -a --color"
 
-alias c = 'cd $PROJECTS'
-
 ## Archive
 alias untar="tar xvf"
 alias ungz="gunzip"
