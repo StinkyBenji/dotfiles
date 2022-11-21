@@ -2,3 +2,4 @@
 tools/git/gitconfig-local.symlink
 homebrew.path.zsh
 ~/
+*decrypted*

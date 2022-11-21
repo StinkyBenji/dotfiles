@@ -23,12 +23,10 @@
 [help]
   autocorrect = 1
 [credential]
-	helper = store
+	helper = osxkeychain
 [pull]
 	rebase = false
 [init]
 	defaultBranch = main
 
-[user]
-	email = ether852@gmail.com
-	name = StinkyBenji
+
