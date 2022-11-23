@@ -9,10 +9,10 @@ if test ! "$(which brew)"; then
   if test "$(uname)" = "Darwin" || test "$(expr substr $(uname -s) 1 5)" = "Linux"; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
     if test "$(expr substr $(uname -s) 1 5)" = "Linux"; then
-      /home/linuxbrew/.linuxbrew/bin/brew shellenv >> tools/homebrew/homebrew.path.zsh
-      /home/linuxbrew/.linuxbrew/bin/brew bundle --file tools/homebrew/Brewfile
+      /home/linuxbrew/.linuxbrew/bin/brew shellenv >> $DOTFILES/tools/homebrew/homebrew.path.zsh
+      /home/linuxbrew/.linuxbrew/bin/brew bundle --file $DOTFILES/tools/homebrew/Brewfile
     elif test "$(uname)" = "Darwin"; then
-    	brew bundle --file tools/homebrew/Brewfile
+    	brew bundle --file $DOTFILES/tools/homebrew/Brewfile
     fi
   fi
 fi

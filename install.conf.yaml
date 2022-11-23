@@ -15,4 +15,3 @@
     - [git submodule update --init --recursive, Installing submodules]
     - [source $HOME/.zshrc]
     - [$DOTFILES/script/dependencies-install.sh]
-    - [$DOTFILES/script/dependencies-update.sh]

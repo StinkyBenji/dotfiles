@@ -28,5 +28,6 @@
 	rebase = false
 [init]
 	defaultBranch = main
-
-
+[user]
+	email = ether852@gmail.com
+	name = StinkyBenji
