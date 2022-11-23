@@ -10,7 +10,11 @@
     ~/.gitconfig: tools/git/gitconfig.symlink
     ~/.gitignore: tools/git/gitignore.symlink
     ~/.vimrc: tools/vim/vimrc.symlink
+    ~/.zsh_aliases: tools/zsh/zsh-aliases.symlink
+    ~/.p10k.zsh: tools/zsh/p10k.symlink
+    ~/.zsh_completions: tools/zsh/zsh-completions.symlink
 
+    
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
     - [source $HOME/.zshrc]

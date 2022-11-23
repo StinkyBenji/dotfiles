@@ -1,6 +1,7 @@
 export DOTFILES=$HOME/.dotfiles
+DEFAULT_USER=stbenji
 
-# Load antigen
+#Load antigen
 source $DOTFILES/antigen/bin/antigen.zsh
 
 # Load oh-my-zsh library
@@ -28,8 +29,17 @@ typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
 # disable the update prompt and perform an auto-update
 export DISABLE_UPDATE_PROMPT=true
-export PROJECTS=$HOME/code
-export EDITOR=nvim
+
+# load aliases for zsh
+alias zshconfig="vim ~/.zshrc"
+if [ -f ~/.zsh_aliases ]; then
+    source ~/.zsh_aliases
+fi
+
+# load completions for zsh
+if [ -f ~/.zsh_completions ]; then
+    source ~/.zsh_completions
+fi
 
 # initialize autocomplete here, otherwise functions won't be loaded
 if type brew &>/dev/null; then
@@ -51,5 +61,11 @@ zle -N down-line-or-beginning-search
 bindkey "^[[A" up-line-or-beginning-search # Up
 bindkey "^[[B" down-line-or-beginning-search # Down
 
+# for sops age key
+export SOPS_AGE_KEY_FILE=$HOME/Library/Application\ Support/sops/age/keys.txt
 
+export PROJECTS=$HOME/code
+export EDITOR=nvim
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$PATH
 
