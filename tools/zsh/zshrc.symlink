@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 export DOTFILES=$HOME/.dotfiles
 DEFAULT_USER=stbenji
 
@@ -41,6 +48,11 @@ if [ -f ~/.zsh_completions ]; then
     source ~/.zsh_completions
 fi
 
+# load env for zsh
+if [ -f ~/.zshenv ]; then
+    source ~/.zshenv
+fi
+
 # initialize autocomplete here, otherwise functions won't be loaded
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
@@ -60,12 +72,4 @@ zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 bindkey "^[[A" up-line-or-beginning-search # Up
 bindkey "^[[B" down-line-or-beginning-search # Down
-
-# for sops age key
-export SOPS_AGE_KEY_FILE=$HOME/Library/Application\ Support/sops/age/keys.txt
-
-export PROJECTS=$HOME/code
-export EDITOR=nvim
-export GOPATH=$HOME/go
-export PATH=$GOPATH/bin:$PATH
 
