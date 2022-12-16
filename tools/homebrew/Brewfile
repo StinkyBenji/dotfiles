@@ -28,7 +28,7 @@ brew "golangci-lint"
 brew "podman"
 brew "age"
 brew "neovim"
-
+brew "goenv"
 
 cask "visual-studio-code"
 cask "notion"
