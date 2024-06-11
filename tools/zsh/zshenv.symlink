@@ -9,3 +9,4 @@ export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$PATH
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
+skip_global_compinit=1

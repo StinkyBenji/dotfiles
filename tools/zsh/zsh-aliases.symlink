@@ -18,4 +18,3 @@ alias untargz="tar zxvf"
 alias untarbz1="tar jxvf"
 alias ungz2="bunzip2 -k"
 
-
