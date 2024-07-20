@@ -1,9 +1,4 @@
 tap "homebrew/bundle"
-tap "homebrew/cask"
-tap "homebrew/cask-fonts"
-tap "homebrew/cask-versions"
-tap "homebrew/core"
-
 
 brew "readline"
 brew "xz"
@@ -17,8 +12,6 @@ brew "jq"
 brew "kubernetes-cli"
 brew "yq"
 brew "zsh"
-brew "glow"
-brew "gum"
 brew "ffmpeg"
 brew "kustomize"
 brew "gh"
