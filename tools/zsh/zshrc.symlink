@@ -6,7 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 export DOTFILES=$HOME/.dotfiles
-DEFAULT_USER=stbenji
+DEFAULT_USER=ruizhang
 
 #Load antigen
 source $DOTFILES/antigen/bin/antigen.zsh
@@ -75,4 +75,6 @@ bindkey "^[[A" up-line-or-beginning-search # Up
 bindkey "^[[B" down-line-or-beginning-search # Down
 
 export PATH="/usr/local/sbin:$PATH"
+
 eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(pyenv virtualenv-init -)"

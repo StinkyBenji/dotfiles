@@ -1,5 +1,5 @@
 export PROJECTS=$HOME/code
-export EDITOR=nvim
+export EDITOR=code
 
 export GOENV_ROOT="$HOME/.goenv"
 export PATH="$GOENV_ROOT/bin:$PATH"
