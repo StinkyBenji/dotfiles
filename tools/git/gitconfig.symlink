@@ -4,27 +4,50 @@
   protocol = https
 [alias]
   co = checkout
+[branch]
+  sort = -committerdate
 [color]
   diff = auto
   status = auto
   branch = auto
   ui = true
+[column]
+  ui = auto
+[commit]
+  verbose = true
 [core]
   excludesfile = ~/.gitignore
-  editor = code --wait
+	autocrlf = input
 [apply]
   whitespace = nowarn
 [mergetool]
   keepBackup = false
 [push]
   default = simple
-[difftool]
-  prompt = false
+  autoSetupRemote = true
+  followTags = true
+[diff]
+  algorithm = histogram
+  colorMoved = plain
+  mnemonicPrefix = true
+  renames = true
 [help]
-  autocorrect = 1
+  autocorrect = prompt
 [credential]
-	helper = cache 
+  helper = cache
+[fetch]
+  prune = true
+  pruneTags = true
+  all = true
 [pull]
 	rebase = false
 [init]
 	defaultBranch = main
+[rebase]
+  autoSquash = true
+  autoStash = true
+  updateRefs = true
+# Reuse recorded resolutions
+[rerere]
+  enabled = true
+  autoupdate = true
