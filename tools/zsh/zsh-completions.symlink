@@ -1,0 +1,6 @@
+[[ $commands[kubectl] ]] && source <(kubectl completion zsh)
+
+# initialize autocomplete here, otherwise functions won't be loaded
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+fi

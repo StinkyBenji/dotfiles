@@ -24,5 +24,6 @@ brew "pyenv-virtualenv"
 brew "kubectl"
 brew "1password-cli"
 brew "k9s"
+brew "glab" 
 
 cask "font-inconsolata-go-nerd-font"
